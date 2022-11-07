@@ -1,3 +1,26 @@
+<?php 
+include 'config.php';
+
+if (isset($_POST['submit'])) {
+    $nama_matakuliah = $_POST['nama_matakuliah'];
+    $bobot = $_POST['bobot'];
+    $semester = $_POST['semester'];
+
+    $sql = "INSERT INTO matakuliah (nama_matakuliah, bobot, semester) 
+        VALUES('".$nama_matakuliah."', '".$bobot."', '".$semester."')";
+
+    $simpan = $koneksi->query($sql);
+
+    if ($simpan) {
+        echo "Data berhasil disimpan";
+    } else {
+        echo "Data Gagal Disimpan";
+    }
+
+    $koneksi->close();
+}
+
+?>
 <html>
     <head>
         <title>Jurnal UNUHA</title>

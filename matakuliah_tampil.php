@@ -24,6 +24,7 @@ $hasil = $koneksi->query($sql);
                     <th>Nama Matakuliah</th>
                     <th>SKS</th>
                     <th>Bobot</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,7 +38,9 @@ $hasil = $koneksi->query($sql);
                         <td><?php echo $row['nama_matakuliah']; ?></td>
                         <td><?php echo $row['bobot']; ?></td>
                         <td><?php echo $row['semester']; ?></td>
-                        <td></td>
+                        <td>
+                            <a href="matakuliah_edit.php?id_matakuliah=<?php echo $row['id_matakuliah'] ?>">Edit</a>
+                        </td>
                     </tr>
                 <?php
                     }
