@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 07, 2022 at 09:03 AM
+-- Generation Time: Nov 07, 2022 at 11:28 AM
 -- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.16
 
@@ -63,6 +63,13 @@ CREATE TABLE `matakuliah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `matakuliah`
+--
+
+INSERT INTO `matakuliah` (`id_matakuliah`, `nama_matakuliah`, `bobot`, `semester`) VALUES
+(1, 'Pemrograman Web II', 3, 5);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -91,21 +98,22 @@ ALTER TABLE `matakuliah`
 --
 
 --
+-- AUTO_INCREMENT for table `dosen`
+--
+ALTER TABLE `dosen`
+  MODIFY `id_dosen` int(9) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `jurnal`
 --
 ALTER TABLE `jurnal`
   MODIFY `jurnal_id` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `matakuliah`
 --
-
---
--- Constraints for table `jurnal`
---
-ALTER TABLE `jurnal`
-  ADD CONSTRAINT `FK_id_dosen` FOREIGN KEY (`id_dosen`) REFERENCES `dosen` (`id_dosen`),
-  ADD CONSTRAINT `FK_id_matakuliah` FOREIGN KEY (`id_matakuliah`) REFERENCES `matakuliah` (`id_matakuliah`);
+ALTER TABLE `matakuliah`
+  MODIFY `id_matakuliah` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
