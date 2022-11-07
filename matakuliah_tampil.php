@@ -1,3 +1,11 @@
+<?php 
+include 'config.php';
+
+// Ambil data dari database
+$sql = "SELECT * FROM matakuliah";
+$hasil = $koneksi->query($sql);
+
+?>
 <html>
     <head>
         <title>Jurnal UNUHA</title>
@@ -19,9 +27,28 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                $no_urut = 1; 
+                if ($hasil->num_rows > 0) {
+                    while ($row = $hasil->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td><?php echo $no_urut++; ?></td>
+                        <td><?php echo $row['nama_matakuliah']; ?></td>
+                        <td><?php echo $row['bobot']; ?></td>
+                        <td><?php echo $row['semester']; ?></td>
+                        <td></td>
+                    </tr>
+                <?php
+                    }
+                } else {
+                ?>
                 <tr>
                     <td colspan="4">Belum Ada Data Matakuliah</td>
                 </tr>
+                <?php 
+                }
+                ?>
             </tbody>
         </table>
 
