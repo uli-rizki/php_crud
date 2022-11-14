@@ -13,7 +13,7 @@
                     <a href="dosen_tampil.php">Data Dosen</a>
                 </li>
                 <li>
-                    <a href="#">Data Jurnal</a>
+                    <a href="jurnal_tampil.php">Data Jurnal</a>
                 </li>
             </ul>
         </div>
