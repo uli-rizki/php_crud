@@ -2,6 +2,8 @@
 include 'config.php';
 
 $id_matakuliah = isset($_GET['id_matakuliah']) ? $_GET['id_matakuliah'] : "";
+// $id_matakuliah = $_GET['id_matakuliah'];
+
 if ($id_matakuliah == "") {
     echo "Tidak ada ID Matakuliah";
 } else {

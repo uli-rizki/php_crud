@@ -10,7 +10,7 @@
                     <a href="matakuliah_tampil.php">Data Matakuliah</a>
                 </li>
                 <li>
-                    <a href="#">Data Dosen</a>
+                    <a href="dosen_tampil.php">Data Dosen</a>
                 </li>
                 <li>
                     <a href="#">Data Jurnal</a>
