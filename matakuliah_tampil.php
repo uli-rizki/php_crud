@@ -39,7 +39,8 @@ $hasil = $koneksi->query($sql);
                         <td><?php echo $row['bobot']; ?></td>
                         <td><?php echo $row['semester']; ?></td>
                         <td>
-                            <a href="matakuliah_edit.php?id_matakuliah=<?php echo $row['id_matakuliah'] ?>">Edit</a>
+                            <a href="matakuliah_edit.php?id_matakuliah=<?php echo $row['id_matakuliah'] ?>">Edit</a> | 
+                            <a href="matakuliah_hapus.php?id_matakuliah=<?php echo $row['id_matakuliah'] ?>">Hapus</a>
                         </td>
                     </tr>
                 <?php

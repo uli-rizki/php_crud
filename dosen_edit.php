@@ -29,7 +29,7 @@ if ($id_dosen == '') {
                 SET nidn='".$nidn."', 
                 nama_dosen='".$nama_dosen."', 
                 gelar_depan='".$gelar_depan."',
-                gelar_belakang='".$gelar_belakang."' 
+                gelar_belakang='".$gelar_belakang."'  
                 WHERE id_dosen=".$id_dosen."
                 ";
 
