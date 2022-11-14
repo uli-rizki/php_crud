@@ -16,6 +16,22 @@ if ($id_matakuliah == "") {
     } else {
         echo "Data tidak ditemukan";
     }
+
+    if (isset($_POST['submit'])) {
+        $nama_matakuliah = $_POST['nama_matakuliah'];
+        $bobot = $_POST['bobot'];
+        $semester = $_POST['semester'];
+
+        $query_update = "UPDATE matakuliah SET nama_matakuliah='".$nama_matakuliah."', bobot=".$bobot.", semester=".$bobot." WHERE id_matakuliah=".$id_matakuliah."";
+
+        $update = $koneksi->query($query_update);
+
+        if ($update) {
+            echo "Data berhasil disimpan";
+        } else {
+            echo "Data gagal disimpan";
+        }
+    }
 }
 ?>
 
