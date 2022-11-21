@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (! isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+?>
 <html>
     <head>
         <title>Jurnal UNUHA</title>
@@ -14,6 +22,9 @@
                 </li>
                 <li>
                     <a href="jurnal_tampil.php">Data Jurnal</a>
+                </li>
+                <li>
+                    <a href="logout.php">Keluar</a>
                 </li>
             </ul>
         </div>

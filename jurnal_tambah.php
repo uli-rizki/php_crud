@@ -26,6 +26,11 @@ $data_matakuliah = $koneksi->query($query_matakuliah);
                 }}
                 ?>
             </select>
+            <br/>
+            <label>Nama Dosen</label>
+            <select id="id_matakuliah" name="id_matakuliah" required>
+                <option value="">-- Pilih Dosen --</option>
+            </select>
             <br />
             <br />
             <input type="submit" name="submit" value="Simpan">

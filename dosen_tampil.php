@@ -1,6 +1,11 @@
 <?php 
+session_start();
 include 'config.php';
 
+if (! isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 // Ambil data dari database
 $sql = "SELECT * FROM dosen";
 $hasil = $koneksi->query($sql);

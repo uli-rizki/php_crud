@@ -1,5 +1,11 @@
 <?php 
+session_start();
 include 'config.php';
+
+if (! isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 
 $id_dosen = isset($_GET['id_dosen']) ? $_GET['id_dosen'] : "";
 
