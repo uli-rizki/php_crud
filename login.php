@@ -16,6 +16,8 @@ if (isset($_POST['submit'])) {
     if ($hasil->num_rows > 0) {
         $row = $hasil->fetch_object();
         $_SESSION['username'] = $row->username;
+        $_SESSION['akses'] = $row->akses;
+
         header("Location: index.php");
     } else {
         echo "username dan password salah";

@@ -12,8 +12,11 @@ if (! isset($_SESSION['username'])) {
     </head>
     <body>
         <h1>Menu Utama</h1>
+        <h2>Selamat Datang <?php echo $_SESSION['username']; ?></h2>
+        <h3>Akses anda adalah : <?php echo $_SESSION['akses']; ?></h3>
         <div>
             <ul>
+                <?php if($_SESSION['akses'] == 'superadmin'){ ?>
                 <li>
                     <a href="matakuliah_tampil.php">Data Matakuliah</a>
                 </li>
@@ -23,6 +26,11 @@ if (! isset($_SESSION['username'])) {
                 <li>
                     <a href="jurnal_tampil.php">Data Jurnal</a>
                 </li>
+                <?php } else { ?>
+                <li>
+                    <a href="jurnal_tampil.php">Data Jurnal</a>
+                </li>
+                <?php } ?>
                 <li>
                     <a href="logout.php">Keluar</a>
                 </li>
