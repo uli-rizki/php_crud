@@ -1,5 +1,15 @@
 <?php 
+session_start();
 include 'config.php';
+
+if (! isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+if ($_SESSION['akses'] != 'superadmin') {
+    header("Location: index.php");
+}
 
 // Ambil data dari database
 $sql = "SELECT * FROM matakuliah";
